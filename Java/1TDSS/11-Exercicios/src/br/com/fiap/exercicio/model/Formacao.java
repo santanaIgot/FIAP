@@ -2,12 +2,15 @@ package br.com.fiap.exercicio.model;
 
 public class Formacao {
 
-	private String descricao;
+	public String descricao;
 	private int periodo;
 	private double mensalidade;
-	private int duracao;
+	public int duracao;
 
 	public void definirDuracao() {
+		if (this instanceof Medio) {
+			duracao = 24;
+		}
 	}
 
 	public double calcularMedia(double global1, double global2) {
